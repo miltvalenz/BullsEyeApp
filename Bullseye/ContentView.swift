@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // First comment
     @State var alertIsVisible: Bool = false
     
     var body: some View {
         VStack {
-            Text("My First App!!!")
+            Text("Welcome To My First App!!!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.pink)
@@ -22,7 +23,7 @@ struct ContentView: View {
                 print("Button pressed!!!")
                 self.alertIsVisible = true
             }) {
-                Text("Learning Swift")
+                Text("Hit Me!")
             }
             .alert(isPresented: $alertIsVisible) { () ->
                 Alert in
@@ -32,8 +33,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ContentView_Previews:
+    PreviewProvider {
+        static var previews: some View {
+            ContentView().previewLayout(
+                .fixed(width: 896, height: 414))
     }
 }
