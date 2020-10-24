@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("epale!!!")
+            Text("My First App!!!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.pink)
@@ -22,7 +22,7 @@ struct ContentView: View {
                 print("Button pressed!!!")
                 self.alertIsVisible = true
             }) {
-                Text("hit me")
+                Text("Learning Swift")
             }
             .alert(isPresented: $alertIsVisible) { () ->
                 Alert in
